@@ -1,0 +1,42 @@
+html
+    head
+        title hi pug
+    body
+        // Comment line
+        //div(id='header') header area
+
+        - var school = 'Marmara University'
+        - var city   = 'Istanbul'
+
+        | School Name : #{ school }
+        br
+        | City : #{ city.toUpperCase() }
+
+        hr
+
+        - var num = 13;
+
+        if !num
+            | No number variable
+        else if num === 12
+            | Number is 12
+        else 
+            | Number is not 12
+        hr
+
+        =job
+        br
+        span(style="color: white; background-color: black") 
+            | Hi #{ firstName }
+
+        br
+        include other
+        br
+        include footer
+
+        hr
+
+        - var n = 0;
+        ul
+        while n < 4
+            li= n++
